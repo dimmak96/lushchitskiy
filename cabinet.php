@@ -16,7 +16,7 @@ echo 'Ошибка входа';
 <div class = 'col-md-3'>
 <div class = 'menu'>
 <?php
-//sdfsdfsdfsdfsdfsdfsdgsdfgdfgcsdfsfasfsadfsdfsdf
+//sdfsdfsdfsdfsdfsdfsdgsv xcvxcvxcv
 					$query = "SELECT * FROM $tbl_catalog WHERE showhide='show'";
 					$cat = mysql_query($query);
 					if(!$cat){
