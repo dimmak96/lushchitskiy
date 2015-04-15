@@ -16,7 +16,7 @@ echo 'Ошибка входа';
 <div class = 'col-md-3'>
 <div class = 'menu'>
 <?php
-
+//sdfsdfsdfsdfsdfsdfsdgsdfgdfg
 					$query = "SELECT * FROM $tbl_catalog WHERE showhide='show'";
 					$cat = mysql_query($query);
 					if(!$cat){
@@ -34,6 +34,7 @@ echo "<h3>".$tbl_user['login']."</h3>";
 echo "<h3>".$tbl_user['email']."</h3>";
 	?>
 	</div>
+	
 	
 
 
