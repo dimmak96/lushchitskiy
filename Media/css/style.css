@@ -1,0 +1,103 @@
+	#header{
+		height: 285px;
+		background:url('../img/fon.jpg');
+	}
+	#logo{
+		float:left;
+		
+	}
+	#headlinks{
+		float:right;
+		padding:20px;
+	}
+	#headlinks a{
+	color:red;
+	}
+	#footer{
+		background:#345;
+		padding-top:20px;
+		padding-bottom:20px;
+		text-align:center;
+	}
+	#footer a{
+		color:green;
+		font-size:20px;
+	}
+	
+	.topmenu{
+		display:-moz-box;
+		display:-webkit-flex;
+		display:flex;
+		text-align:center;
+		flex-direction:row;
+		width:100%;
+		margin:0 auto;	
+	}
+	.topmenu a{
+		display:column;
+		-moz-box-flex:1;
+		-webkit-flex:1;
+		flex:1;
+		font-size:20px;
+		padding:1px;
+		color:yellow;
+		background:blue;
+		text-decoration:none;
+		border-right:1px white solid;
+	
+	}
+	.topmenu a:hover{
+		background:orange;
+		color:black;
+	}
+	@media screen and (max-width:768px){
+		#logo{
+			display:none;
+	}
+		#header{
+			height:300px;
+	}
+	.topmenu{
+		flex-direction:column;
+	}
+	}
+	.menu{
+		display:-moz-box;
+		display:-webkit-flex;
+		display:flex;
+		text-align:left;
+		flex-direction:column;
+		width:100%;
+		margin:0 auto;
+	}
+	
+	.menu a{
+		width:100%;
+		margin-top:10px;
+		text-align:left;
+	}
+	
+	.maintext{
+		color:red;
+	}
+	
+	.col-md-6{
+	text-align:left;
+	}
+	.col-md-2{
+	text-align:center;
+	}
+	.col-md-12{
+	text-align:center;
+	color:orange;
+	}
+	.tovar{
+	float:left;
+	width:220px;
+	padding:10px;
+	border:solid 1px black;
+	margin:10px;
+	box-shadow:2px 2px 2px black;
+	border-radius:6px;
+	}
+	}
