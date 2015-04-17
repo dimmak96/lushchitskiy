@@ -42,4 +42,51 @@ $file='index';
 	echo $tovar['price'];
 	echo "</div>";
 	}
+	
+	?>
+	
+	<script>
+	$(function(){
+	var fx={
+	"initModal":function(){
+	if($('.model-window').length==0){
+	
+	$('<div>').attr('id','jquery-overlay').fadeIn(500).appendTo('body');
+	return $('<div>').addClass('model-window').appendTo('body');//создается селектор
+	}else{
+	return $('.model-window');//селектор
+	}
+		}
+	}
+	$('.picture').bind('click',function(e){
+	e.preventDefault();
+	var data=$(this).attr('data');
+	model=fx.initModal();
+	$.ajax({
+	type:'POST',
+	
+	url:'ajax.php',
+	data:'id='+data,
+	success:function(data){
+	model.append(data);
+	},
+	error:function(msg){
+	model.append(msg);//вызываем элемент
+	}
+	});
+	$('<a>').attr('href','#').addClass('model-close-btn').html('&times').click(function(event){
+	$('#jquery-overlay').fadeOut(500,function(){
+	$(this).remove();
+	});
+	model.fadeOut(500,function(){
+	$(this).remove();
+	});
+	
+	
+	
+	}).fadeIn(500).appendTo(model);
+	});
+	});
+	</script>
+	<?php
 require_once('templates/bottom.php');?>
